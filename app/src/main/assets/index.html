@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>RAHULRAJ Food Delivery</title><link rel="stylesheet" href="style.css"></head>
+<body><header><div class="brand">🍛 RAHULRAJ</div><div class="sub">Food Delivery · Kasdol</div></header>
+<nav><button class="nav active" onclick="showPage('shop',this)">ऑर्डर करें</button><button class="nav" onclick="showPage('admin',this)">Admin Panel</button></nav>
+<main><section id="shop"><div class="hero"><h1>घर बैठे खाना मंगाएँ</h1><p>कसडोल और आसपास के गाँवों में डिलीवरी</p><a href="tel:6267348506">📞 6267348506 पर कॉल करें</a></div>
+<h2>मेन्यू</h2><div id="menu" class="menu"></div><div class="panel"><h2>आपका ऑर्डर</h2><div id="cart">अभी कोई आइटम नहीं चुना गया।</div><div class="total">कुल: ₹<span id="total">0</span></div>
+<label>आपका नाम<input id="customer" placeholder="पूरा नाम"></label><label>मोबाइल नंबर<input id="phone" inputmode="tel" placeholder="मोबाइल नंबर"></label><label>डिलीवरी पता / गाँव<input id="address" placeholder="गाँव, मोहल्ला, घर का पता"></label>
+<label>पेमेंट का तरीका<select id="payment"><option value="COD">कैश ऑन डिलीवरी (COD)</option><option value="ONLINE">ऑनलाइन पेमेंट (अभी सेटअप बाकी)</option></select></label><button class="primary" onclick="placeOrder()">ऑर्डर भेजें</button><p class="small">ऑनलाइन पेमेंट अभी सक्रिय नहीं है। फिलहाल COD चुनें।</p><p id="message"></p></div></section>
+<section id="admin" hidden><div class="hero"><h1>Admin Panel</h1><p>इस फोन/ब्राउज़र में सेव किए गए ऑर्डर</p></div><div class="panel"><label>Admin PIN<input id="pin" type="password" inputmode="numeric" placeholder="डेमो PIN: 2468"></label><button class="primary" onclick="unlockAdmin()">Admin खोलें</button><p class="small">यह डेमो PIN है, सुरक्षित सर्वर-लॉगिन नहीं।</p></div><div id="ordersArea" hidden><div class="row"><h2>ऑर्डर</h2><button onclick="renderOrders()">रीफ्रेश</button></div><div id="orders"></div></div></section></main>
+<footer>RAHULRAJ Food Delivery · Kasdol, Chhattisgarh</footer><script src="app.js"></script></body></html>
